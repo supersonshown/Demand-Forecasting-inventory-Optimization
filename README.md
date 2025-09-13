@@ -94,31 +94,7 @@ seaborn>=0.11.0
 - **품절 감소**: 수요 예측을 통한 적정 재고 유지
 - **비용 절감**: 과잉 재고 20% 감소로 보관 비용 절약
 
-## 🎯 사용 방법
 
-### 수요 예측
-```python
-from src.lstm_model import DemandForecaster
-
-forecaster = DemandForecaster()
-forecaster.load_model('models/lstm_model.h5')
-
-# 7일간 수요 예측
-predictions = forecaster.predict(days=7)
-print(f"다음 주 예상 판매량: {predictions}")
-```
-
-### 재고 최적화
-```python
-from src.inventory_optimizer import InventoryOptimizer
-
-optimizer = InventoryOptimizer()
-optimal_stock = optimizer.calculate_optimal_inventory(
-    predictions=predictions,
-    lead_time=2,
-    safety_stock_factor=1.5
-)
-```
 
 ## 📊 모델 평가 지표
 
@@ -130,23 +106,7 @@ optimal_stock = optimizer.calculate_optimal_inventory(
 - 시계열 잔차의 자기상관 분석
 - 계절성 분해를 통한 트렌드 성분 확인
 
-## 👥 기여하기
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/NewFeature`)
-3. Commit your changes (`git commit -m 'Add NewFeature'`)
-4. Push to the branch (`git push origin feature/NewFeature`)
-5. Open a Pull Request
-
-## 📝 라이선스
-
-이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
-
-## 📞 연락처
-
-- **개발자**: [Your Name]
-- **이메일**: your.email@example.com
-- **GitHub**: [@your-username](https://github.com/your-username)
 
 ## 🙏 감사의 말
 
